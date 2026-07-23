@@ -1,0 +1,89 @@
+### Get all books
+GET https://cse341-library-jc27.onrender.com/books
+
+### Get single book by ID
+GET https://cse341-library-jc27.onrender.com/books/6a6286e461e05d56d45b606a
+
+### Create a new book
+POST https://cse341-library-jc27.onrender.com/books
+Content-Type: application/json
+
+{
+  "title": "The Shadow Man",
+  "author": "John Katzenbach",
+  "isbn": "978-0-345-45526-1",
+  "genre": "Thriller",
+  "publishedYear": 1995,
+  "publisher": "Ballantine Books",
+  "description": "A detective hunts a serial killer through the streets of Miami.",
+  "totalCopies": 3,
+  "availableCopies": 3,
+  "location": "Shelf C4",
+  "language": "English",
+  "pages": 386
+}
+
+### Update a book
+PUT https://cse341-library-jc27.onrender.com/books/6a6286e461e05d56d45b606a
+Content-Type: application/json
+
+{
+  "title": "The Analyst",
+  "author": "John Katzenbach",
+  "isbn": "978-0-345-45523-0",
+  "genre": "Thriller",
+  "publishedYear": 2002,
+  "publisher": "Ballantine Books",
+  "description": "Updated description.",
+  "totalCopies": 5,
+  "availableCopies": 4,
+  "location": "Shelf C1",
+  "language": "English",
+  "pages": 424
+}
+
+### Delete a book
+DELETE https://cse341-library-jc27.onrender.com/books/6a6286e461e05d56d45b606a
+
+### Get all authors
+GET https://cse341-library-jc27.onrender.com/authors
+
+### Get single author by ID
+GET https://cse341-library-jc27.onrender.com/authors/6a6286e461e05d56d45b606d
+
+### Create a new author
+POST https://cse341-library-jc27.onrender.com/authors
+Content-Type: application/json
+
+{
+  "firstName": "Stephen",
+  "lastName": "King",
+  "biography": "Stephen King is an American author of horror and supernatural fiction.",
+  "nationality": "American",
+  "birthYear": 1947,
+  "website": "https://www.stephenking.com",
+  "email": "contact@stephenking.com",
+  "awardsWon": ["Bram Stoker Award", "World Fantasy Award"],
+  "booksWritten": 63,
+  "isActive": true
+}
+
+### Update an author
+PUT https://cse341-library-jc27.onrender.com/authors/6a6286e461e05d56d45b606d
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Katzenbach",
+  "biography": "Updated biography.",
+  "nationality": "American",
+  "birthYear": 1950,
+  "website": "https://www.johnkatzenbach.com",
+  "email": "contact@johnkatzenbach.com",
+  "awardsWon": ["Edgar Award Nominee"],
+  "booksWritten": 13,
+  "isActive": true
+}
+
+### Delete an author
+DELETE https://cse341-library-jc27.onrender.com/authors/6a6286e461e05d56d45b606d
